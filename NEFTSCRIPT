@@ -1,0 +1,34 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("ketz#0001 | NERF ISLAND HUB", "DarkTheme")
+
+ -- MAIN
+ local Main = Window:NewTab("Main")
+ local MainSection = Main:NewSection("Autofarm")
+ 
+ 
+ MainSection:NewButton("Autofarm Pog", "it what u injected for lol, the autofarm.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ketz0001/NerfIslandHUB/main/NERFSCRIPT'))()
+ end)
+ 
+--LOCAL PLAYER
+    local Player = Window:NewTab("Extra")
+    local PlayerSection = Player:NewSection("Extra")
+
+    PlayerSection:NewSlider("Walk Speed", "change ur speed so u can go vroom vroom", 500, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+    PlayerSection:NewSlider("Jump Power", "change how high u can jump so u can go boing boing", 350, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+    
+     local PlayerSection = Player:NewSection("Reset the options above")
+
+    PlayerSection:NewButton("Reset WS/JP", "resets the bs u made dumbass", function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end)
+
+-- CREDITS
+local Main = Window:NewTab("Credits")
+local MainSection = Main:NewSection("made with <3 by ketz#0001")
